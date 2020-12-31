@@ -15,7 +15,7 @@ body {
     background-image: url('./images/pattern-bg.svg'),
         url('./images/pattern-curve.svg'), url('./images/pattern-quotes.svg');
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: right 20% top 38%, bottom left, top 30% left 15%;
+    background-position: right 20% top 38%, bottom left, top 25% left 18%;
     background-size: auto 520px, 55% auto, 8% auto;
     font-family: 'Inter', sans-serif;
 }
@@ -38,7 +38,7 @@ div.profile {
     grid-template-rows: 100%;
 }
 div.testimonial {
-    grid-row: 1/2;
+    grid-row: span 1;
     grid-column: 1/2;
     display: flex;
     flex-flow: column nowrap;
@@ -76,7 +76,7 @@ div.testimonial-author {
 div.picture {
     position: relative;
     grid-column: 2/3;
-    grid-row: 1/2;
+    grid-row: span 1;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -89,6 +89,7 @@ div.picture {
 div.picture img.author {
     width: 433px;
     height: 433px;
+    border-radius: 2%;
     box-shadow: -10px 15px 50px -5px rgb(156, 153, 153);
 }
 div.buttons button {
@@ -169,5 +170,157 @@ main section div.hidden {
     }
     100% {
         transform: translateX(0%);
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    body {
+        background-size: 540px 550px, 55% auto, 11% auto;
+        background-position: right 20% top 49%, bottom left, top 31% left 19%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    body {
+        background-size: 530px 550px, 55% auto, 10% auto;
+        background-position: right 5% top 49.5%, bottom left, top 37% left 22%;
+    }
+    p.comment {
+        width: 100%;
+    }
+    div.testimonial {
+        left: 15%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    body {
+        background-size: auto 52%, 60% auto, 12% auto;
+        background-position: top 5% center, bottom left, top 60% center;
+    }
+
+    div.profile {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+    div.picture div.buttons {
+        left: 40%;
+        border-radius: 50%;
+        width: 100px;
+        height: 50px;
+    }
+    div.buttons button {
+        width: 50px;
+        height: 50px;
+    }
+    div.testimonial {
+        grid-row: 2/3;
+        grid-column: span 1;
+        position: static;
+        align-items: center;
+        text-align: center;
+    }
+    p.comment {
+        width: 71%;
+    }
+    p.name,
+    p.job {
+        font-size: 30px;
+    }
+    p.job {
+        margin-right: 0;
+        margin-top: 1%;
+    }
+    div.testimonial-author {
+        flex-flow: column nowrap;
+        align-self: center;
+    }
+    div.picture {
+        grid-row: 1/2;
+        grid-column: span 1;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    div.picture img.author {
+        width: auto;
+        height: 85%;
+    }
+}
+
+@media all and (max-width: 540px) {
+    body {
+        background-size: auto 52%, 60% auto, 10% auto;
+        background-position: top 5% center, bottom left, top 60% center;
+    }
+    div.picture {
+        justify-content: center;
+        width: 55%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 0;
+    }
+    div.picture div.buttons {
+        left: 40%;
+        width: 30%;
+        height: 15%;
+        border-radius: 50%;
+        justify-content: center;
+    }
+    div.buttons button {
+        margin: auto;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div.buttons button img {
+        width: 20%;
+        height: auto;
+    }
+    div.picture img.author {
+        width: 100%;
+        height: auto;
+    }
+    p.comment {
+        font-size: 4vw;
+        width: 70%;
+    }
+    p.name,
+    p.job {
+        font-size: 3vw;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 450px) {
+    body {
+        background-size: 90% 50%, 60% auto, 12% auto;
+        background-position: top 10% center, bottom left, top 64% center;
+    }
+
+    div.picture {
+        width: 75%;
+        margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: 376px) {
+    body {
+        background-size: 90% auto, 60% auto, 12% auto;
+        background-position: top 9% center, bottom left, top 58% center;
+    }
+    div.picture {
+        width: 70%;
+        margin-bottom: 0;
+    }
+    div.picture div.buttons {
+        width: 30%;
+        height: 17%;
+    }
+    div.buttons button {
+        width: 50%;
+        height: 100%;
     }
 }
