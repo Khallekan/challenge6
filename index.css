@@ -203,10 +203,10 @@ main section div.hidden {
         grid-template-rows: 50% 50%;
     }
     div.picture div.buttons {
-        left: 40%;
+        left: 50%;
+        bottom: -5%;
+        transform: translateX(-50%);
         border-radius: 50%;
-        width: 100px;
-        height: 50px;
     }
     div.buttons button {
         width: 50px;
@@ -261,11 +261,8 @@ main section div.hidden {
         margin-bottom: 0;
     }
     div.picture div.buttons {
-        left: 40%;
-        width: 30%;
-        height: 15%;
-        border-radius: 50%;
-        justify-content: center;
+        width: 25%;
+        height: 10%;
     }
     div.buttons button {
         margin: auto;
@@ -315,10 +312,7 @@ main section div.hidden {
         width: 70%;
         margin-bottom: 0;
     }
-    div.picture div.buttons {
-        width: 30%;
-        height: 17%;
-    }
+
     div.buttons button {
         width: 50%;
         height: 100%;
